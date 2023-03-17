@@ -1,7 +1,17 @@
 import React from "react";
+import styled from "styled-components";
 
-const Heading = () => {
-  return <div>Heading</div>;
-};
+const StyledHeading = styled.div`
+  height: 100px;
+  background-color: #74ceb7;
+  color: #004056;
+  text-align: center;
+`;
 
-export default Heading;
+export default function Heading() {
+  return (
+    <>
+      <StyledHeading>App Name</StyledHeading>
+    </>
+  );
+}
