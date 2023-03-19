@@ -1,22 +1,33 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components"
+import Link from "next/link";
 
-const StyledNavigation = styled.ul`
-  height: 100px;
+const StyledList = styled.ul`
   display: flex;
   justify-content: space-around;
+  height: 100px;
+  align-items: center;
   background-color: #74ceb7;
 `;
-const StyledNavigationItem = styled.li``;
+const StyledListItem = styled.li``;
 
 export default function Navigation() {
   return (
     <>
-      <StyledNavigation>
-        <StyledNavigationItem>123</StyledNavigationItem>
-        <StyledNavigationItem>456</StyledNavigationItem>
-        <StyledNavigationItem>789</StyledNavigationItem>
-      </StyledNavigation>
+      <StyledList>
+        <StyledListItem>
+          <Link href="/">homepage</Link>
+        </StyledListItem>
+        <StyledListItem>
+          <Link href="/art-pieces">favorite</Link>
+        </StyledListItem>
+        <StyledListItem>
+          <Link href="#">shoppingcart</Link>
+        </StyledListItem>
+        <StyledListItem>
+          <Link href="#">profil</Link>
+        </StyledListItem>
+      </StyledList>
     </>
   );
 }
