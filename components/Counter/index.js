@@ -5,12 +5,7 @@ import styled from "styled-components";
 export default function Counter(props) {
   return (
     <StyledCounter>
-    
-      <button>
-        <span>+</span>
-      </button>
-     
-      <span>{props.amount}</span>
+        +
     </StyledCounter>
   );
 }
