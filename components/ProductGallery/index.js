@@ -2,24 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import ProductCard from "../ProductCard";
 
-export default function ProductGallery() {
+export default function ProductGallery(props) {
   return (
-    <>
+    
       <StyledProductGallery>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
+        {props.productData.map(item=>
+        <ProductCard 
+        key={item.id}
+        productcard={item}
+        /> 
+        )}
+        
       </StyledProductGallery>
-    </>
+    
   );
 }
 

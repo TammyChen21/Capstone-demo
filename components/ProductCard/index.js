@@ -1,20 +1,20 @@
 import styled from "styled-components";
+import Counter from "../Counter";
 
 //each product card component
-export default function ProductCard() {
+export default function ProductCard(props) {
   return (
     <StyledProductCard>
       <div>
-        <img src="../img/beispielsfoto.png" alt="photo" width="180px" height="180px"/>
+        <img src={props.productcard.image} alt="photo" width="180px" height="180px"/>
       </div>
       <div>
-        <h2>Fahrrad</h2>
+        <h3>{props.productcard.title}</h3>
         <p>
-          Ich verkaufe das Fahrrad meiner Tochter, da es zu klein geworden ist.
-          Guter Zustand!
+          {props.productcard.description}
         </p>
-        <div>50€</div>
-        <div>shoppingcart</div>
+        <div>{props.productcard.price}</div>
+        <Counter amount={props.productcard.amount}/>
 
       </div>
     </StyledProductCard>
