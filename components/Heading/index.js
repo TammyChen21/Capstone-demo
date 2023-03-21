@@ -1,6 +1,12 @@
+import React from "react";
 import styled from "styled-components";
 
-const Heading = styled.h1`
-  text-align: center;
-`;
-export default Heading;
+
+
+export default function Heading() {
+  return (
+    <>
+      
+    </>
+  );
+}

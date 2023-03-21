@@ -1,9 +1,13 @@
 import Heading from "../components/Heading";
+import Navigation from "../components/Navigation";
+import Layout from "../components/Layout";
+import ProductGallery from "../components/ProductGallery";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
-      <Heading>Siqis tolles Capstone Project</Heading>
-    </main>
+    <>
+      <Layout />
+      <ProductGallery />
+    </>
   );
 }
