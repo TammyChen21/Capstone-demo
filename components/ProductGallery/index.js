@@ -25,5 +25,6 @@ const StyledProductGallery = styled.ul`
   justify-content: center;
   list-style: none;
   gap: 10px;
+  position: relative;
 `;
 

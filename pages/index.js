@@ -17,16 +17,14 @@ const PRODUCT_DATA = [
     id: "2",
     image: "../img/2.jpeg",
     title: "Sophie La Girafe Lernspielzeug",
-    description:
-      "Diverses Spielzeug wie Beißring Rassel Spiegel Nachziehtier Quietsche Püppchen ",
+    description: "Beißring Rassel Spiegel Nachziehtier Quietsche Püppchen ",
     price: "10,00€",
   },
   {
     id: "3",
     image: "../img/3.jpeg",
     title: "Baby Greifling",
-    description:
-      "Personalisiertes Babygreifling - 100% Baumwolle - verschiedene Farben verfügbar - handmade",
+    description: "Personalisiertes Babygreifling - 100% Baumwolle",
     price: "4,50€",
   },
 
@@ -41,7 +39,7 @@ const PRODUCT_DATA = [
   {
     id: "5",
     image: "../img/5.jpeg",
-    title: "Playmobil 5529 Tierarztpraxis",
+    title: "Playmobil Tierarztpraxis",
     description: "Wir verkaufen die Tierarztpraxis von Playmobil. ",
     price: "20,00€",
   },
@@ -50,7 +48,7 @@ const PRODUCT_DATA = [
     id: "6",
     image: "../img/6.jpeg",
     title: "Einhorn Motiv pyjamas F&F Gr. 116/5-6 Jahre",
-    description: "Top zustand, super 100% Baumwolle.F&F Marke aus England.",
+    description: "Super 100% Baumwolle.F&F Marke aus England.",
     price: "7,00€",
   },
 
@@ -73,7 +71,7 @@ const PRODUCT_DATA = [
   {
     id: "9",
     image: "../img/9.jpeg",
-    title: "Baby Spielzeug - großes Paket",
+    title: "Baby Spielzeug",
     description: "Verkaufe viele Baby Spielsachen im Paket.",
     price: "10,00€",
   },
@@ -81,9 +79,8 @@ const PRODUCT_DATA = [
   {
     id: "10",
     image: "../img/10.jpeg",
-    title: "Blumen dunkel handmade Set",
-    description:
-      "Neues handmade Set aus biojersey bestehend aus einem loopschal der beidseitig getragen werden kann",
+    title: "Blumen handmade Set",
+    description: "Neues handmade Set, beidseitig getragen werden kann",
     price: "13,00€",
   },
 
@@ -101,7 +98,7 @@ const PRODUCT_DATA = [
     title: "Set Leggins Hoodie",
     description: "süßes Set",
     price: "10,00€",
-  }
+  },
 ];
 
 export default function HomePage() {
