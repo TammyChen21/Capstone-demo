@@ -1,4 +1,4 @@
-import Heading from "../components/Heading";
+
 import Layout from "../components/Layout";
 import ProductGallery from "../components/ProductGallery";
 import { useState } from "react";

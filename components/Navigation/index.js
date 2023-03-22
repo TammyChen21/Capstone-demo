@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
-const StyledListItem = styled.li``;
-
 export default function Navigation() {
   return (
     <>
@@ -11,7 +9,9 @@ export default function Navigation() {
         <Link href="/">homepage</Link>
       </StyledListItem>
       <StyledListItem>
-        <Link href="/art-pieces">favorite</Link>
+        <div>
+          <Link href="/art-pieces">favorite</Link>
+        </div>
       </StyledListItem>
       <StyledListItem>
         <Link href="#">shoppingcart</Link>
@@ -22,3 +22,5 @@ export default function Navigation() {
     </>
   );
 }
+
+const StyledListItem = styled.li``;

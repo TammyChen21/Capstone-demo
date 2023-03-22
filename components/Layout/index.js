@@ -26,6 +26,7 @@ const StyledHeading = styled.div`
 `;
 
 const StyledNav = styled.ul`
+  list-style-type: none;
   height: 100px;
   background-color: #6ce5d2;
   bottom: 0;
