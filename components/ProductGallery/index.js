@@ -4,22 +4,15 @@ import ProductCard from "../ProductCard";
 
 export default function ProductGallery(props) {
   return (
-    
-      <StyledProductGallery>
-        {props.productData.map(item=>
-        <ProductCard 
-        key={item.id}
-        productcard={item}
-        /> 
-        )}
-        
-      </StyledProductGallery>
-    
+    <StyledProductGallery>
+      {props.productData.map((product) => (
+        <ProductCard key={product.id} productcard={product} />
+      ))}
+    </StyledProductGallery>
   );
 }
 
 const StyledProductGallery = styled.ul`
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -27,4 +20,3 @@ const StyledProductGallery = styled.ul`
   gap: 10px;
   position: relative;
 `;
-

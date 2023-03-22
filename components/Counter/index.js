@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 //Counter component
-export default function Counter(props) {
+export default function Counter() {
   return <StyledCounter>+</StyledCounter>;
 }
 

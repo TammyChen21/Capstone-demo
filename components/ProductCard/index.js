@@ -2,21 +2,19 @@ import styled from "styled-components";
 import Counter from "../Counter";
 
 //each product card component
-export default function ProductCard(props) {
+export default function ProductCard({ productcard }) {
+  const { image, title, description, price, amount } = productcard;
   return (
     <StyledProductCard>
-      <StyledImg
-        src={props.productcard.image}
-        alt="photo"
-        width="180px"
-        height="180px"
-      />
+      <StyledImg src={image} alt="photo" width="180px" height="180px" />
       <div>
-        <StyledTitle>{props.productcard.title}</StyledTitle>
-        <StyledDes>{props.productcard.description}</StyledDes>
-        <StyledPrice>{props.productcard.price}</StyledPrice>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledDes>{description}</StyledDes>
+        <StyledPrice>{price}</StyledPrice>
       </div>
-      <div><Counter amount={props.productcard.amount} /></div>
+      <div>
+        <Counter amount={amount} />
+      </div>
     </StyledProductCard>
   );
 }
@@ -30,7 +28,7 @@ const StyledProductCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position:relative;
+  position: relative;
 `;
 //background-color:#97EAEE
 const StyledImg = styled.img`
@@ -58,6 +56,6 @@ const StyledPrice = styled.p`
   color: #fc8663;
   margin-left: 30px;
   font-weight: 600;
-  position:absolute;
-  bottom:10px;
+  position: absolute;
+  bottom: 10px;
 `;
