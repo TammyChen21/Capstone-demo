@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 //Counter component
-export default function Counter() {
-  return <StyledCounter>+</StyledCounter>;
+export default function AddButton() {
+  return <StyledAddButton type="button" onClick={()=>{console.log(123)}} >
+    +
+    </StyledAddButton>;
 }
 
-const StyledCounter = styled.div`
+const StyledAddButton= styled.button`
   border: none;
   background-color: #6ce5d2;
   width: 40px;

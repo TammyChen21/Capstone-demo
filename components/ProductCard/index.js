@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import Counter from "../Counter";
+import AddButton from "../AddButton";
+import Counter from "../AddButton";
 
 //each product card component
 export default function ProductCard({ productcard }) {
@@ -13,7 +14,7 @@ export default function ProductCard({ productcard }) {
         <StyledPrice>{price}</StyledPrice>
       </div>
       <div>
-        <Counter amount={amount} />
+        <AddButton amount={amount} />
       </div>
     </StyledProductCard>
   );
