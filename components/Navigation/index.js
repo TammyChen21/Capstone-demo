@@ -14,7 +14,7 @@ export default function Navigation() {
         </div>
       </StyledListItem>
       <StyledListItem>
-        <Link href="#">shoppingcart</Link>
+        <Link href="http://localhost:3000/shopping-cart">shoppingcart</Link>
       </StyledListItem>
       <StyledListItem>
         <Link href="#">profil</Link>

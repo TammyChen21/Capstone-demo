@@ -14,7 +14,7 @@ export default function ProductCard({ productcard }) {
         <StyledPrice>{price}</StyledPrice>
       </div>
       <div>
-        <AddButton amount={amount} />
+        <AddButton productcard={productcard} />
       </div>
     </StyledProductCard>
   );

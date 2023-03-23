@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { CartContext } from "../../pages/_app";
 
 //Counter component
-export default function AddButton() {
-  return <StyledAddButton type="button" onClick={()=>{console.log(123)}} >
-    +
-    </StyledAddButton>;
+export default function AddButton(props) {
+
+  const cartcontext = useContext(CartContext);
+
+  const addButtonHandler = () => {
+    cartcontext.addProductHandler(props.productcard)
+  };
+  return (
+    <StyledAddButton
+      type="button"
+      onClick={()=>{ addButtonHandler()}
+       
+      }
+    >
+      +
+    </StyledAddButton>
+  );
 }
 
-const StyledAddButton= styled.button`
+const StyledAddButton = styled.button`
   border: none;
   background-color: #6ce5d2;
   width: 40px;

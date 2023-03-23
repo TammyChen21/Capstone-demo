@@ -1,8 +1,8 @@
-
 import Layout from "../components/Layout";
 import ProductGallery from "../components/ProductGallery";
 import { useState } from "react";
 import PRODUCT_DATA from "../pages/api/productsdaten.js";
+import { CartContext } from "./_app";
 
 export default function HomePage() {
   const [productData, setProductData] = useState(PRODUCT_DATA);
@@ -14,26 +14,30 @@ export default function HomePage() {
     totalPrice: 0,
   });
   // add product in the shopping cart:
-  const addProductHandler = (product) => {
+  const addProductHandler = (productcard) => {
     const newCart = { ...cartData };
     // if the product already exists in the shopping cart
-    if (newCart.items.indexOf(product) < 0) {
-      newCart.products.push(product);
-      product.amount = 1;
+    if (newCart.products.indexOf(productcard) < 0) {
+      newCart.products.push(productcard);
+      productcard.amount = 1;
+      
     } else {
-      product.amount += 1;
+      productcard.amount += 1; 
     }
+    
 
+    // add total amount and total price for products in the shopping cart:
     newCart.totalAmount += 1;
-    newCart.totalPrice += product.price;
-
-
+    newCart.totalPrice += productcard.price;
   };
 
+  
   return (
+    <CartContext.Provider value={{...cartData,addProductHandler}}>
     <>
       <Layout />
       <ProductGallery productData={productData} />
     </>
+    </CartContext.Provider>
   );
 }
