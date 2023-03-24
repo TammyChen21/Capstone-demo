@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import AddButton from "../AddButton";
-import Counter from "../AddButton";
+
 
 //each product card component
 export default function ProductCard({ productcard }) {

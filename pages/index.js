@@ -7,7 +7,7 @@ import { CartContext } from "./_app";
 export default function HomePage() {
   const [productData, setProductData] = useState(PRODUCT_DATA);
 
-  // state for shopping cart:(products, total amount, total price)
+ 
  
 
   return (

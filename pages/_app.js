@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }) {
   // add product in the shopping cart:
   const addProductHandler = (productcard) => {
     const newCart = { ...cartData };
-    // if the product already exists in the shopping cart
+     //if the product already exists in the shopping cart
     if (newCart.products.indexOf(productcard) < 0) {
       newCart.products.push(productcard);
       productcard.amount = 1;
