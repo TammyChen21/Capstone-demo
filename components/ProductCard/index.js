@@ -16,6 +16,7 @@ export default function ProductCard({ productcard }) {
       <div>
         <AddButton productcard={productcard} />
       </div>
+      
     </StyledProductCard>
   );
 }

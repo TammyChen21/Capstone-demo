@@ -4,21 +4,23 @@ import { CartContext } from "../../pages/_app";
 
 //Counter component
 export default function AddButton(props) {
-
   const cartcontext = useContext(CartContext);
 
   const addButtonHandler = () => {
-    cartcontext.addProductHandler(props.productcard)
+    cartcontext.addProductHandler(props.productcard);
   };
   return (
-    <StyledAddButton
-      type="button"
-      onClick={()=>{ addButtonHandler()}
-       
-      }
-    >
-      +
-    </StyledAddButton>
+    <>
+      <StyledAddButton
+        type="button"
+        onClick={() => {
+          addButtonHandler();
+        }}
+      >
+        +
+      </StyledAddButton>
+      
+    </>
   );
 }
 
