@@ -4,19 +4,11 @@ import Layout from "/components/Layout";
 import { useContext } from "react";
 import { CartContext } from "../_app";
 
-
-
-
-
 export default function ShoppingCartPage() {
-
-    
   return (
     <>
-    
       <Layout />
       <ShoppingCart />
-     
     </>
   );
 }

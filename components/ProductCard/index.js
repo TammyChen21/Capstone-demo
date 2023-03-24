@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import AddButton from "../AddButton";
 
-
 //each product card component
 export default function ProductCard({ productcard }) {
   const { image, title, description, price, amount } = productcard;
@@ -13,10 +12,8 @@ export default function ProductCard({ productcard }) {
         <StyledDes>{description}</StyledDes>
         <StyledPrice>{price}</StyledPrice>
       </div>
-      <div>
-        <AddButton productcard={productcard} />
-      </div>
-      
+
+      <AddButton productcard={productcard} />
     </StyledProductCard>
   );
 }

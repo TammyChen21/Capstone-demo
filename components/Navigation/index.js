@@ -5,21 +5,18 @@ import { useContext } from "react";
 import { CartContext } from "../../pages/_app";
 
 export default function Navigation() {
-
-  const context=useContext(CartContext)
+  const context = useContext(CartContext);
   return (
     <>
       <StyledListItem>
         <Link href="/">homepage</Link>
       </StyledListItem>
       <StyledListItem>
-        <div>
-          <Link href="/art-pieces">favorite</Link>
-        </div>
+        <Link href="/art-pieces">favorite</Link>
       </StyledListItem>
       <StyledListItem>
         <Link href="http://localhost:3000/shopping-cart">shoppingcart</Link>
-        <div>{context.totalAmount}</div>
+        <p>{context.totalAmount}</p>
       </StyledListItem>
       <StyledListItem>
         <Link href="#">profil</Link>

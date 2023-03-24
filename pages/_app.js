@@ -3,18 +3,9 @@ import Head from "next/head";
 import { createContext } from "react";
 import { useState } from "react";
 
-
 export const CartContext = createContext();
-/*
-    data for shopping cart
-    products: [],
-    totalAmount: 0,
-    totalPrice: 0,
-    addProduct()=>{},
-    */
-  
-export default function App({ Component, pageProps }) {
 
+export default function App({ Component, pageProps }) {
   const [cartData, setCartData] = useState({
     products: [],
     totalAmount: 0,
@@ -23,7 +14,7 @@ export default function App({ Component, pageProps }) {
   // add product in the shopping cart:
   const addProductHandler = (productcard) => {
     const newCart = { ...cartData };
-     //if the product already exists in the shopping cart
+    //if the product already exists in the shopping cart
     if (newCart.products.indexOf(productcard) < 0) {
       newCart.products.push(productcard);
       productcard.amount = 1;
@@ -38,15 +29,14 @@ export default function App({ Component, pageProps }) {
     setCartData(newCart);
   };
 
-
   return (
     <>
-     <CartContext.Provider value={{ ...cartData, addProductHandler }}>
-      <GlobalStyle />
-      <Head>
-        <title>Capstone Project</title>
-      </Head>
-      <Component {...pageProps} />
+      <CartContext.Provider value={{ ...cartData, addProductHandler }}>
+        <GlobalStyle />
+        <Head>
+          <title>Capstone Project</title>
+        </Head>
+        <Component {...pageProps} />
       </CartContext.Provider>
     </>
   );
