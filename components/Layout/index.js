@@ -20,14 +20,15 @@ const StyledAppContainer = styled.div`
 
 const StyledHeading = styled.div`
   height: 100px;
-  background-color: #6CE5D2;
+  background-color: #6ce5d2;
   color: #004056;
   text-align: center;
 `;
 
 const StyledNav = styled.ul`
+  list-style-type: none;
   height: 100px;
-  background-color: #6CE5D2;
+  background-color: #6ce5d2;
   bottom: 0;
   position: fixed;
   width: 100%;
@@ -35,5 +36,5 @@ const StyledNav = styled.ul`
   justify-content: space-around;
   height: 100px;
   align-items: center;
- 
+  z-index: 999;
 `;

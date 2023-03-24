@@ -10,6 +10,7 @@ export default function ProductGallery(props) {
       ))}
     </StyledProductGallery>
   );
+  
 }
 
 const StyledProductGallery = styled.ul`
