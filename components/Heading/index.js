@@ -1,11 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 import SearchBar from "../SearchBar";
+import PRODUCT_DATA from "/pages/api/productsdaten.js";
 
-export default function Heading() {
+import { useContext } from "react";
+import { useState } from "react";
+
+export default function Heading(props) {
+  
   return (
     <>
-      <SearchBar />
+       
     </>
   );
 }

@@ -8,6 +8,7 @@ export default function Layout({ children }) {
     <StyledAppContainer>
       <StyledHeading>
         <h1>App Name</h1>
+        
         <Heading />
       </StyledHeading>
 

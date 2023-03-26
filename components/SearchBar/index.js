@@ -2,34 +2,42 @@ import React from "react";
 import styled from "styled-components";
 import { CiSearch } from "react-icons/ci";
 
-export default function SearchBar() {
-  return (
-    <div>
-      <StyledSearchBar>
-       <StyledIcon><CiSearch color="black" fontSize="20" /></StyledIcon> 
+export default function SearchBar(props) {
+  const inputChangeHandler = (event) => {
+    event.preventDefault();
+    const keyword = event.target.value;
+    props.onFilter(keyword);
+  };
 
-        <StyledInput type="text" placeholder="Search" />
-      </StyledSearchBar>
-    </div>
+  return (
+    <StyledSearchBar>
+      <StyledIcon>
+        <CiSearch color="black" fontSize="20" />
+      </StyledIcon>
+      <StyledInput
+        onChange={inputChangeHandler}
+        type="text"
+        placeholder="Search"
+      />
+    </StyledSearchBar>
   );
 }
 
-const StyledSearchBar = styled.div`
-  
-`;
 const StyledIcon = styled.span`
-position:absolute;
-margin-left:5px;
-margin-top:4px;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 4px;
 `;
 
 const StyledInput = styled.input`
-  width: 260px;
+  width: 300px;
   height: 30px;
   border-radius: 6px;
   border: solid 1px;
   color: gray;
-  background-color: #f3f3f3;
-  padding-left:25px;
-
+  background-color: #F3F3F3;
+  padding-left: 25px;
+`;
+const StyledSearchBar = styled.div`
+margin-left:650px;
 `;

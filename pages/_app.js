@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }) {
     totalAmount: 0,
     totalPrice: 0,
   });
+
   // add product in the shopping cart:
   const addProductHandler = (productcard) => {
     const newCart = { ...cartData };
@@ -31,7 +32,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <CartContext.Provider value={{ ...cartData, addProductHandler }}>
+      <CartContext.Provider
+        value={{ ...cartData, addProductHandler}}
+      >
         <GlobalStyle />
         <Head>
           <title>Capstone Project</title>

@@ -14,18 +14,18 @@ export default function Navigation() {
   return (
     <>
       <StyledListItem>
-        <Link href="/">homepage<CiHome/></Link>
+        <Link href="/"><CiHome color="black" fontSize="50" />Home</Link>
       </StyledListItem>
       <StyledListItem>
-        <Link href="/art-pieces">favorite <CiHeart/></Link>
+        <Link href="/art-pieces">favorite <CiHeart color="black" fontSize="50" /></Link>
       </StyledListItem>
       <StyledListItem>
-        <Link href="http://localhost:3000/shopping-cart">shoppingcart <CiShoppingCart/>
+        <Link href="http://localhost:3000/shopping-cart">shoppingcart<CiShoppingCart color="black" fontSize="50" />
         </Link>
         <p>{context.totalAmount}</p>
       </StyledListItem>
       <StyledListItem>
-        <Link href="#">profil <CiUser/></Link>
+        <Link href="#">profil <CiUser color="black" fontSize="50" /></Link>
       </StyledListItem>
     </>
   );
