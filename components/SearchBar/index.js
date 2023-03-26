@@ -35,9 +35,11 @@ const StyledInput = styled.input`
   border-radius: 6px;
   border: solid 1px;
   color: gray;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   padding-left: 25px;
 `;
 const StyledSearchBar = styled.div`
-margin-left:650px;
+  position: absolute;
+  padding-left:160px;
+  
 `;
