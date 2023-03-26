@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Navigation from "../Navigation";
+import Heading from "../Heading";
 
 export default function Layout({ children }) {
   return (
     <StyledAppContainer>
-      <StyledHeading>App Name</StyledHeading>
+      <StyledHeading>
+        <h1>App Name</h1>
+        <Heading />
+      </StyledHeading>
 
       <StyledNav>
         <Navigation />
