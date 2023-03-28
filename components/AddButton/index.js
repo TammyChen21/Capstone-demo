@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { CartContext } from "../../pages/_app";
-import { CiShoppingCart } from "react-icons/ci";
+import { RiShoppingCartLine} from "react-icons/ri";
 
 //Counter component
 export default function AddButton(props) {
@@ -18,7 +18,7 @@ export default function AddButton(props) {
           addButtonHandler();
         }}
       >
-        <CiShoppingCart color="hotpink" fontSize="30"/>
+        <RiShoppingCartLine color="hotpink" fontSize="28"/>
       </StyledAddButton>
     
   );

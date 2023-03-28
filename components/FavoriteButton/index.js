@@ -1,37 +1,42 @@
-import React from "react";
+import React,{useContext} from "react";
 import styled from "styled-components";
-import { CiHeart } from "react-icons/ci";
+import { RiStarSmileLine } from "react-icons/ri";
+import { RiStarSmileFill } from "react-icons/ri";
+import { CartContext } from "../../pages/_app";
+
 
 export default function FavoriteButton() {
-  //const cartcontext = useContext(CartContext);
+  const cartcontext = useContext(CartContext);
 
-  /* const addButtonHandler = () => {
+  /* const toggleHandler = () => {
       cartcontext.addProductHandler(props.productcard);
     };*/
   return (
     <StyledFavoriteButton
       type="button"
       onClick={() => {
-        addButtonHandler();
+        toggleHandler();
       }}
     >
-      <CiHeart color="hotpink" fontSize="30" />
+        <RiStarSmileLine color="hotpink" fontSize="28"/>
+      
+
     </StyledFavoriteButton>
   );
 }
 
 const StyledFavoriteButton = styled.button`
   border: none;
-  background-color: #C9FFD5;
+  background-color: #c9ffd5;
   width: 35px;
   height: 30px;
   border-radius: 50%;
   font-size: 10px;
   color: #fc8ac3;
-  margin-right: 40px;
+  margin-right: 45px;
   position: absolute;
   right: 10px;
   bottom: 20px;
   line-height: 50px;
-  
 `;
+//<RiStarSmileFill color="hotpink" fontSize="50"/>
