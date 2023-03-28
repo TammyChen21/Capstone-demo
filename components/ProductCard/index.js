@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import AddButton from "../AddButton";
+import FavoriteButton from "../FavoriteButton";
 
 //each product card component
 export default function ProductCard({ productcard }) {
@@ -12,7 +13,7 @@ export default function ProductCard({ productcard }) {
         <StyledDes>{description}</StyledDes>
         <StyledPrice>{price}</StyledPrice>
       </div>
-
+      <FavoriteButton productcard={productcard}/>
       <AddButton productcard={productcard} />
     </StyledProductCard>
   );
