@@ -18,13 +18,13 @@ export default function Navigation() {
       </StyledListItem>
       <StyledListItem>
         <CiHeart color="FFFFCB" fontSize="50" />
-        <Link href="/art-pieces">favorite </Link>
+        <Link href="/favorite">favorite </Link>
       </StyledListItem>
 
       <StyledListItem>
         <StyledCounter>{context.totalAmount}</StyledCounter>
         <CiShoppingCart color="FFFFCB" fontSize="50" />
-        <Link href="http://localhost:3000/shopping-cart">shoppingcart</Link>
+        <Link href="/shopping-cart">shoppingcart</Link>
       </StyledListItem>
 
       <StyledListItem>

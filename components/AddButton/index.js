@@ -11,30 +11,29 @@ export default function AddButton(props) {
     cartcontext.addProductHandler(props.productcard);
   };
   return (
-    <>
+    
       <StyledAddButton
         type="button"
         onClick={() => {
           addButtonHandler();
         }}
       >
-        <CiShoppingCart color="#fc8ac3" fontSize="30"/>
+        <CiShoppingCart color="hotpink" fontSize="30"/>
       </StyledAddButton>
-    </>
+    
   );
 }
 
 const StyledAddButton = styled.button`
   border: none;
-  background-color: #6ce5d2;
-  width: 40px;
-  height: 40px;
+  background-color: #C9FFD5;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  font-size: 30px;
   color: #fc8ac3;
-  margin-right: 20px;
-  text-align: center;
+  margin-right: 10px;
   position: absolute;
   right: 10px;
   bottom: 20px;
+  line-height:50px;
 `;
