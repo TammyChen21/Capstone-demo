@@ -1,12 +1,15 @@
 import React from "react";
-import styled from "styled-components";
+import SearchBar from "../SearchBar";
+import PRODUCT_DATA from "/pages/api/productsdaten.js";
 
+import { useContext } from "react";
+import { useState } from "react";
 
-
-export default function Heading() {
+export default function Heading(props) {
+  
   return (
     <>
-      
+       
     </>
   );
 }
