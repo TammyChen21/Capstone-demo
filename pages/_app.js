@@ -45,7 +45,9 @@ export default function App({ Component, pageProps }) {
       newFavorites.products.push(productcard);
     }
     setFavorites(newFavorites);
+    
   };
+  
 
   return (
     <>

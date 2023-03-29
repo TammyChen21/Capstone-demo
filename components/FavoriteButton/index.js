@@ -20,7 +20,7 @@ export default function FavoriteButton(props) {
     <StyledFavoriteButton
       type="button"
       onClick={() => {
-        favoriteButtonHandler();
+        [favoriteButtonHandler(), handleFavoriteClick()];
       }}
     >
       {isFavorite ? (
