@@ -45,4 +45,18 @@ const StyledFavoriteButton = styled.button`
   right: 10px;
   bottom: 20px;
   line-height: 50px;
+
+  -webkit-transition: all 0.2s ease-out;
+
+  -moz-transition: all 0.2s ease;
+
+  -o-transition: all 0.2s ease;
+
+  &:hover {
+    -webkit-transform: rotate(-50deg);
+
+    -moz-transform: rotate(-50deg);
+
+    -o-transform: rotate(-50deg);
+  }
 `;
