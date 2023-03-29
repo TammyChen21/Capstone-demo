@@ -1,5 +1,6 @@
 const PRODUCT_DATA = [
   {
+    id: "0",
     image: "../img/1.jpeg",
     title: "HAPE Puppenhaus aus Holz",
     description: "Wohnzimmer, Küche, Bad, Schlafzimmer, Balkon...",
@@ -7,12 +8,14 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "1",
     image: "../img/2.jpeg",
     title: "Sophie La Girafe Lernspielzeug",
     description: "Diverses Spielzeug wie Beißring Rassel Spiegel ",
     price: "10,00€",
   },
   {
+    id: "2",
     image: "../img/3.jpeg",
     title: "Baby Greifling",
     description: "Personalisiertes Babygreifling - 100% Baumwolle - handmade",
@@ -20,6 +23,7 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "3",
     image: "../img/4.jpeg",
     title: "Micky Maus!",
     description: "Großes Micky Maus Plüschtier",
@@ -27,6 +31,7 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "4",
     image: "../img/5.jpeg",
     title: "Playmobil Tierarztpraxis",
     description: "Wir verkaufen die Tierarztpraxis von Playmobil. ",
@@ -34,6 +39,7 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "5",
     image: "../img/6.jpeg",
     title: "Einhorn Motiv pyjamas F&F Gr. 116",
     description: "Super 100% Baumwolle.F&F Marke aus England.",
@@ -41,6 +47,7 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "6",
     image: "../img/7.jpeg",
     title: "Schnuffelhase / Schmusetuch",
     description: "Schnuffeltuch ca 30 x 30 cm Musselin ",
@@ -48,6 +55,7 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "7",
     image: "../img/8.jpeg",
     title: "Gehäckelte Haarspange",
     description: "Einzeln 3€, Paar 5€",
@@ -55,6 +63,7 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "8",
     image: "../img/9.jpeg",
     title: "Baby Spielzeug - großes Paket",
     description: "Verkaufe viele Baby Spielsachen im Paket.",
@@ -62,6 +71,7 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "9",
     image: "../img/10.jpeg",
     title: "Blumen dunkel handmade Set",
     description: "Neues handmade Set, beidseitig getragen werden kann",
@@ -69,6 +79,7 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "10",
     image: "../img/11.jpeg",
     title: "Baby Weste",
     description: "Größe 74",
@@ -76,6 +87,7 @@ const PRODUCT_DATA = [
   },
 
   {
+    id: "11",
     image: "../img/12.jpeg",
     title: "Set Leggins Hoodie",
     description: "süßes Set",

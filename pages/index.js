@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import ProductGallery from "../components/ProductGallery";
 import { useState } from "react";
 import PRODUCT_DATA from "../pages/api/productsdaten.js";
-import { CartContext } from "./_app";
+
 import SearchBar from "../components/SearchBar";
 
 export default function HomePage() {

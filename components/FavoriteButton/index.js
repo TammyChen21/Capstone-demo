@@ -1,29 +1,33 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { RiStarSmileLine } from "react-icons/ri";
 import { RiStarSmileFill } from "react-icons/ri";
-import { CartContext } from "../../pages/_app";
+import { useContext } from "react";
+import { FavoriteContext } from "../../pages/_app";
 
-export default function FavoriteButton() {
-  //const cartcontext = useContext(CartContext);
+export default function FavoriteButton(props) {
+  const favoritecontext = useContext(FavoriteContext);
+  const favoriteButtonHandler = () => {
+    favoritecontext.handleFavorite(props.productcard);
+  };
 
-  /* const toggleHandler = () => {
-      cartcontext.addProductHandler(props.productcard);
-    };*/
+  const [isFavorite, setIsFavorite] = useState(false);
 
-  const [isFavorited, setIsFavorited] = useState(true);
-  const toggleHandler = () => {
-    setIsFavorited(!isFavorited);
+  const handleFavoriteClick = () => {
+    setIsFavorite(!isFavorite);
   };
   return (
     <StyledFavoriteButton
       type="button"
       onClick={() => {
-        toggleHandler();
+        favoriteButtonHandler();
       }}
     >
-      {isFavorited?<RiStarSmileLine color="hotpink" fontSize="28"/>:
-      <RiStarSmileFill color="hotpink" fontSize="28"/>}
+      {isFavorite ? (
+        <RiStarSmileFill color="hotpink" fontSize="28" />
+      ) : (
+        <RiStarSmileLine color="hotpink" fontSize="28" />
+      )}
     </StyledFavoriteButton>
   );
 }
@@ -42,5 +46,3 @@ const StyledFavoriteButton = styled.button`
   bottom: 20px;
   line-height: 50px;
 `;
-
-

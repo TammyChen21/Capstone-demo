@@ -13,23 +13,28 @@ export default function Navigation() {
   return (
     <>
       <StyledListItem>
-        <RiHomeHeartLine color="FFFFCB" fontSize="50" />
-        <Link href="/">Home</Link>
+        <Link href="/">
+          <RiHomeHeartLine color="FFFFCB" fontSize="50" />
+        </Link>
       </StyledListItem>
       <StyledListItem>
-        <RiStarSmileLine color="FFFFCB" fontSize="50" />
-        <Link href="/favorite">favorite </Link>
+        <Link href="/favorite">
+          <RiStarSmileLine color="FFFFCB" fontSize="50" />
+        </Link>
       </StyledListItem>
 
       <StyledListItem>
         <StyledCounter>{context.totalAmount}</StyledCounter>
-        <RiShoppingCartLine color="FFFFCB" fontSize="50" />
-        <Link href="/shopping-cart">shoppingcart</Link>
+
+        <Link href="/shopping-cart">
+          <RiShoppingCartLine color="FFFFCB" fontSize="50" />
+        </Link>
       </StyledListItem>
 
       <StyledListItem>
-        <RiUserHeartLine color="FFFFCB" fontSize="50" />
-        <Link href="#">profil</Link>
+        <Link href="#">
+          <RiUserHeartLine color="FFFFCB" fontSize="50" />
+        </Link>
       </StyledListItem>
     </>
   );

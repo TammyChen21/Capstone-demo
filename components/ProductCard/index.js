@@ -4,7 +4,7 @@ import FavoriteButton from "../FavoriteButton";
 
 //each product card component
 export default function ProductCard({ productcard }) {
-  const { image, title, description, price, amount } = productcard;
+  const { id,image, title, description, price, amount,isFavorite } = productcard;
   return (
     <StyledProductCard>
       <StyledImg src={image} alt="photo" width="180px" height="180px" />
