@@ -17,7 +17,7 @@ export default function ShoppingCart() {
   );
 }
 
-const StyledShoppingCartProduct = styled.div`
+/*const StyledShoppingCartProduct = styled.div`
   position: relative;
   width: 300px;
   height: 100px;
@@ -32,7 +32,7 @@ const StyledPrice = styled.div`
   width: 100vw;
   height: 80px;
   margin-bottom: 100px;
-`;
+`;*/
 /*export default function ProductCard({ productcard }) {
   const { id,image, title, description, price, amount,isFavorite } = productcard;
   return (

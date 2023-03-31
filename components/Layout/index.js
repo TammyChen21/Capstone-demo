@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <StyledAppContainer>
       <StyledHeading>
-        <h1>App Name</h1>
+        <h1>Wellcome💝</h1>
       </StyledHeading>
 
       <StyledNav>
@@ -17,7 +17,7 @@ export default function Layout({ children }) {
 }
 
 const StyledAppContainer = styled.div`
-  position: relative;
+  position: absolute;
 `;
 
 const StyledHeading = styled.div`
@@ -26,7 +26,9 @@ const StyledHeading = styled.div`
   background-color: #6ce5d2;
   color: #004056;
   text-align: center;
-  margin-top: -25px;
+  position: fixed;
+  z-index: 999;
+  top:0;
 `;
 
 const StyledNav = styled.ul`
