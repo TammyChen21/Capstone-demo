@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
 
     // add total amount and total price for products in the shopping cart:
     newCart.totalAmount += 1;
-    newCart.totalPrice += productcard.price;
+    newCart.totalPrice += Number(productcard.price);
 
     setCartData(newCart);
   };
@@ -45,9 +45,7 @@ export default function App({ Component, pageProps }) {
       newFavorites.products.push(productcard);
     }
     setFavorites(newFavorites);
-    
   };
-  
 
   return (
     <>

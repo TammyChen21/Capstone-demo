@@ -13,7 +13,7 @@ export default function Navigation() {
   return (
     <>
       <StyledListItem>
-        <Link href="/">
+        <Link href="/" aria-label="homepage">
           <RiHomeHeartLine color="FFFFCB" fontSize="50" />
         </Link>
       </StyledListItem>

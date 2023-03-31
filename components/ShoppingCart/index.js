@@ -12,7 +12,13 @@ export default function ShoppingCart() {
         <ProductCard key={product.id} productcard={product} />
       ))}
 
-      <p>{context.totalPrice}</p>
+      <StyledPrice>{context.totalPrice}</StyledPrice>
     </>
   );
 }
+
+const StyledPrice = styled.p`
+  ::after {
+    content: "€";
+  }
+`;

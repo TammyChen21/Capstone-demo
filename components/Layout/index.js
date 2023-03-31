@@ -24,6 +24,7 @@ const StyledAppContainer = styled.div`
 `;
 
 const StyledHeading = styled.div`
+width:100vw;
   height: 100px;
   background-color: #6ce5d2;
   color: #004056;

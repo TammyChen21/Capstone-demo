@@ -58,4 +58,7 @@ const StyledPrice = styled.p`
   font-weight: 600;
   position: absolute;
   bottom: 10px;
+  ::after{
+    content:"€";
+  }
 `;
