@@ -24,9 +24,9 @@ export default function FavoriteButton(props) {
       }}
     >
       {isFavorite ? (
-        <RiStarSmileFill color="hotpink" fontSize="28" />
+        <RiStarSmileFill color="hotpink" fontSize="26" />
       ) : (
-        <RiStarSmileLine color="hotpink" fontSize="28" />
+        <RiStarSmileLine color="hotpink" fontSize="26" />
       )}
     </StyledFavoriteButton>
   );
@@ -35,16 +35,15 @@ export default function FavoriteButton(props) {
 const StyledFavoriteButton = styled.button`
   border: none;
   background-color: #c9ffd5;
-  width: 35px;
-  height: 30px;
+  width: 6%;
+  height: 6%;
   border-radius: 50%;
   font-size: 10px;
   color: #fc8ac3;
-  margin-right: 45px;
+  margin-right: 35%;
   position: absolute;
   right: 10px;
-  bottom: 20px;
-  line-height: 50px;
+  bottom: 6%;
 
   -webkit-transition: all 0.2s ease-out;
 

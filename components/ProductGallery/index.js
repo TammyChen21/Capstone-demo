@@ -14,10 +14,16 @@ export default function ProductGallery(props) {
 }
 
 const StyledProductGallery = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  gap: 10px;
-  position: relative;
+  display:flex;
+  flex-wrap:wrap;
+margin-left:-30px;
+margin-right:10px;
+justify-content:space-around;
+gap:10px;
 `;
+
+/*display: grid;
+  grid-template-columns:repeat(2,45fr);
+  grid-column-gap:10px;
+  grid-row-gap:10px;
+  list-style: none;*/
