@@ -43,8 +43,6 @@ export default function Navigation() {
 const StyledListItem = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 20px;
-  font-variant: small-caps;
   position: relative;
   align-items: center;
 `;

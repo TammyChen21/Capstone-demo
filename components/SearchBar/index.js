@@ -40,6 +40,6 @@ const StyledInput = styled.input`
 `;
 const StyledSearchBar = styled.div`
   position: absolute;
-  padding-left:160px;
+  padding-left:60px;
   
 `;

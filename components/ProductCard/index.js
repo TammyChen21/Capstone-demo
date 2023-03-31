@@ -30,7 +30,7 @@ const StyledProductCard = styled.div`
   align-items: center;
   position: relative;
 `;
-//background-color:#97EAEE
+
 const StyledImg = styled.img`
   border-radius: 20px;
   margin-top: 15px;

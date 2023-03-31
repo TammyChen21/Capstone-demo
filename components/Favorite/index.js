@@ -10,7 +10,7 @@ export default function Favorite(props) {
   return (
     <StyledFavoriteList role="list">
       {context.products.map((product) => (
-        <ProductCard key={product.id} productcard={product} />
+        <ProductCard key={product.id} productcard={product}/>
       ))}
     </StyledFavoriteList>
   );
