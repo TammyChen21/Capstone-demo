@@ -38,7 +38,7 @@ const StyledNav = styled.ul`
   width: 100vw;
   display: flex;
   justify-content: space-around;
-  height: 70px;
+  height: 60px;
   align-items: center;
   z-index: 999;
   padding: 10px;

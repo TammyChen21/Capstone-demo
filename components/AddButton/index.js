@@ -41,7 +41,7 @@ const StyledAddButton = styled.button`
   -o-transition: all 0.2s ease;
 
   &:hover {
-    -webkit-transform: rotate(50deg);
+    -webkit-transform: rotate(20deg);
 
     -moz-transform: rotate(50deg);
 

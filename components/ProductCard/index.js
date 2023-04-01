@@ -53,14 +53,12 @@ const StyledDes = styled.div`
   font-size: 0.7rem;
   margin-left: 10%;
   margin-bottom: -8px;
-
 `;
 
 const StyledPrice = styled.div`
-  position: absolute;
-  margin-top: -36px;
+  margin-top: 30px;
   color: #fc8663;
-  margin-right: 62%;
+  margin-right: 60%;
   font-weight: 500;
   font-size: 1rem;
   ::after {
