@@ -30,7 +30,7 @@ const StyledIcon = styled.span`
 `;
 
 const StyledInput = styled.input`
-  width: 300px;
+  width: 80vw;
   height: 30px;
   border-radius: 6px;
   border: solid 1px;
@@ -39,7 +39,7 @@ const StyledInput = styled.input`
   padding-left: 25px;
 `;
 const StyledSearchBar = styled.div`
-  position: absolute;
-  padding-left:160px;
-  
+  position:fixed;
+  padding-left:10vw;
+  z-index: 999;
 `;

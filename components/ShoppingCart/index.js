@@ -8,11 +8,28 @@ export default function ShoppingCart() {
 
   return (
     <>
+    <StyledShoppingCart>
       {context.products.map((product) => (
         <ProductCard key={product.id} productcard={product} />
       ))}
 
-      <p>{context.totalPrice}</p>
-    </>
+      
+    </StyledShoppingCart>
+      <StyledTotalPrice>{context.totalPrice}</StyledTotalPrice>
+      </>
   );
 }
+const StyledShoppingCart = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-right: 10px;
+  justify-content: space-around;
+  gap: 10px;
+  top: 90px;
+  bottom: 60px;
+  position: absolute;
+`;
+const StyledTotalPrice=styled.div`
+
+`

@@ -10,14 +10,16 @@ export default function ProductGallery(props) {
       ))}
     </StyledProductGallery>
   );
-  
 }
 
 const StyledProductGallery = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
+  margin-left: -30px;
+  margin-right: 10px;
+  justify-content: space-around;
   gap: 10px;
-  position: relative;
+  top: 90px;
+  bottom: 60px;
+  position: absolute;
 `;

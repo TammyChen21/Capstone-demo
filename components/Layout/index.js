@@ -1,15 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Navigation from "../Navigation";
-import Heading from "../Heading";
 
 export default function Layout({ children }) {
   return (
     <StyledAppContainer>
       <StyledHeading>
-        <h1>App Name</h1>
-        
-        <Heading />
+        <h1>Wellcome💝</h1>
       </StyledHeading>
 
       <StyledNav>
@@ -20,26 +17,29 @@ export default function Layout({ children }) {
 }
 
 const StyledAppContainer = styled.div`
-  position: relative;
+  position: absolute;
 `;
 
 const StyledHeading = styled.div`
-  height: 100px;
+  width: 100vw;
+  height: 60px;
   background-color: #6ce5d2;
   color: #004056;
   text-align: center;
+  position: fixed;
+  z-index: 999;
+  top:0;
 `;
 
 const StyledNav = styled.ul`
-  list-style-type: none;
-  height: 100px;
   background-color: #6ce5d2;
-  bottom: 0;
+  bottom: -20px;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
-  height: 100px;
+  height: 60px;
   align-items: center;
   z-index: 999;
+  padding: 10px;
 `;

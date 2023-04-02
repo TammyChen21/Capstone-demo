@@ -3,33 +3,38 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useContext } from "react";
 import { CartContext } from "../../pages/_app";
-import { CiHome } from "react-icons/ci";
-import { CiHeart } from "react-icons/ci";
-import { CiShoppingCart } from "react-icons/ci";
-import { CiUser } from "react-icons/ci";
+import { RiHomeHeartLine } from "react-icons/ri";
+import { RiStarSmileLine } from "react-icons/ri";
+import { RiShoppingCartLine } from "react-icons/ri";
+import { RiUserHeartLine } from "react-icons/ri";
 
 export default function Navigation() {
   const context = useContext(CartContext);
   return (
     <>
       <StyledListItem>
-        <CiHome color="FFFFCB" fontSize="50" />
-        <Link href="/">Home</Link>
+        <Link href="/" aria-label="homepage">
+          <RiHomeHeartLine color="FFFFCB" fontSize="50" />
+        </Link>
       </StyledListItem>
       <StyledListItem>
-        <CiHeart color="FFFFCB" fontSize="50" />
-        <Link href="/art-pieces">favorite </Link>
+        <Link href="/favorite">
+          <RiStarSmileLine color="FFFFCB" fontSize="50" />
+        </Link>
       </StyledListItem>
 
       <StyledListItem>
         <StyledCounter>{context.totalAmount}</StyledCounter>
-        <CiShoppingCart color="FFFFCB" fontSize="50" />
-        <Link href="http://localhost:3000/shopping-cart">shoppingcart</Link>
+
+        <Link href="/shopping-cart">
+          <RiShoppingCartLine color="FFFFCB" fontSize="50" />
+        </Link>
       </StyledListItem>
 
       <StyledListItem>
-        <CiUser color="FFFFCB" fontSize="50" />
-        <Link href="#">profil</Link>
+        <Link href="#">
+          <RiUserHeartLine color="FFFFCB" fontSize="50" />
+        </Link>
       </StyledListItem>
     </>
   );
@@ -38,8 +43,6 @@ export default function Navigation() {
 const StyledListItem = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 20px;
-  font-variant: small-caps;
   position: relative;
   align-items: center;
 `;

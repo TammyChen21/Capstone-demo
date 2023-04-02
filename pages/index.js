@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import ProductGallery from "../components/ProductGallery";
 import { useState } from "react";
 import PRODUCT_DATA from "../pages/api/productsdaten.js";
-import { CartContext } from "./_app";
+import styled from "styled-components";
 import SearchBar from "../components/SearchBar";
 
 export default function HomePage() {
@@ -17,8 +17,13 @@ export default function HomePage() {
   return (
     <>
       <Layout />
+      <StyledMain>
       <SearchBar onFilter={filterHandler} />
       <ProductGallery productData={productData} />
+      </StyledMain>
     </>
   );
 }
+const StyledMain=styled.div`
+margin-top:65px;
+`
