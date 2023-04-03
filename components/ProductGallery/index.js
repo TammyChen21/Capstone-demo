@@ -8,6 +8,7 @@ export default function ProductGallery(props) {
       {props.productData.map((product) => (
         <ProductCard key={product.id} productcard={product} />
       ))}
+      
     </StyledProductGallery>
   );
 }

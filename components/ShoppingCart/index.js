@@ -2,7 +2,10 @@ import React, { useContext } from "react";
 import { CartContext } from "../../pages/_app";
 import ProductCard from "../ProductCard";
 import styled from "styled-components";
-import {BiTrash} from "react-icons/Bi"
+import RemoveButton from "../RemoveButton";
+
+
+
 
 export default function ShoppingCart() {
   const context = useContext(CartContext);
@@ -11,14 +14,15 @@ export default function ShoppingCart() {
     <>
       <StyledShoppingCart>
         {context.products.map((product) => (
-          <ProductCard key={product.id} productcard={product} />
+          <ProductCard key={product.id} productcard={product}/>
         ))}
-<BiTrash/> 
+
         <StyledCheckout>
         <StyledTotalPrice>Total: {context.totalPrice}</StyledTotalPrice>
         <StyledItem>(item: {context.totalAmount})</StyledItem>
         <StyledCheckoutButton><h3>CHECKOUT</h3></StyledCheckoutButton>
         </StyledCheckout>
+        <RemoveButton/>
       </StyledShoppingCart>
     
     </>
@@ -38,8 +42,8 @@ width:100%;
 `;
 const StyledTotalPrice = styled.div`
 font-weight: 600;
-font-size: 1.5rem;
-margin-top:-16px;
+font-size: 1.6rem;
+margin-top:-26px;
 margin-left:20px;
 ::after {
   content: "€";
@@ -56,7 +60,7 @@ margin-left:-240px;
 
 const StyledCheckout=styled.div`
 width: 100vw;
-height:60px;
+height:80px;
 display:flex;
 margin-top:480px;
 margin-left: 40px;
@@ -65,8 +69,9 @@ border-radius:10px;
 justify-content: space-between;
 position:absolute;
 align-items: center;
-background-color:C9FFD5;
+background-color:#f9f166;
 box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
+z-index: 999;
 `
 
 const StyledCheckoutButton=styled.button`
