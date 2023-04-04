@@ -6,18 +6,18 @@ import RemoveButton from "../RemoveButton";
 
 export default function ShoppingCart() {
   const context = useContext(CartContext);
- 
+
   return (
     <>
       <StyledShoppingCart>
         <StyledCard>
-          {context.products.map((product) => 
+          {context.products.map((product) => (
             <ProductCard
               key={product.id}
               productcard={product}
               showAddButton={false}
             />
-          )}
+          ))}
         </StyledCard>
         <StyledCheckout>
           <StyledTotalPrice>Total: {context.totalPrice}</StyledTotalPrice>
@@ -30,7 +30,16 @@ export default function ShoppingCart() {
     </>
   );
 }
-const StyledCard = styled.div``;
+const StyledCard = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-right: 10px;
+  justify-content: space-around;
+  gap: 10px;
+  top: -20px;
+  position: absolute;
+`;
 
 const StyledShoppingCart = styled.div`
   width: 100%;
@@ -69,7 +78,7 @@ const StyledCheckout = styled.div`
   margin-right: 60px;
   border-radius: 10px;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   align-items: center;
   background-color: #f9f166;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
