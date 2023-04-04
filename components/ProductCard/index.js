@@ -5,8 +5,8 @@ import FavoriteButton from "../FavoriteButton";
 import RemoveButton from "../RemoveButton";
 
 //each product card component
-export default function ProductCard({ productcard, showAddButton=true }) {
-  const { id, image, title, description, price, amount, isFavorite } =
+export default function ProductCard({ productcard, showAddButton=true}) {
+  const { id, image, title, description, price, amount, isFavorite,index} =
     productcard;
   return (
     <>
@@ -19,7 +19,7 @@ export default function ProductCard({ productcard, showAddButton=true }) {
         <StyledPrice>{price}</StyledPrice>
 
         <FavoriteButton productcard={productcard} />
-        <div>{showAddButton? <AddButton productcard={productcard} /> :<RemoveButton/>}</div>
+        <div>{showAddButton? <AddButton productcard={productcard} /> :<RemoveButton productcard={productcard}/>}</div>
       </StyledProductCard>
     </>
   );

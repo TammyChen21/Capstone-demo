@@ -6,7 +6,6 @@ import ProductCard from "../components/ProductCard";
 import Favorite from "../components/Favorite";
 import PRODUCT_DATA from "./api/productsdaten";
 
-
 export const CartContext = createContext();
 export const FavoriteContext = createContext();
 
@@ -14,12 +13,10 @@ export default function App({ Component, pageProps }) {
   const [productData, setProductData] = useState(PRODUCT_DATA);
   const [cartData, setCartData] = useState({
     products: [],
-    showAddButton: true,
     totalAmount: 0,
     totalPrice: 0,
   });
 
-  // add product in the shopping cart:
   const addProductHandler = (productcard) => {
     const newCart = { ...cartData };
     //if the product already exists in the shopping cart
@@ -30,13 +27,23 @@ export default function App({ Component, pageProps }) {
       productcard.amount += 1;
     }
 
-    // add total amount and total price for products in the shopping cart:
     newCart.totalAmount += 1;
     newCart.totalPrice += Number(productcard.price);
 
     setCartData(newCart);
   };
-  
+
+  const deleteProductHandler = (productcard) => {
+    const newCart = { ...cartData };
+
+    if (newCart.products.indexOf(productcard) !== -1) {
+      newCart.products.splice(newCart.products.indexOf(productcard), 1);
+    }
+    newCart.totalAmount -= 1;
+    newCart.totalPrice -= Number(productcard.price);
+
+    setCartData(newCart);
+  };
 
   const [favorites, setFavorites] = useState({
     products: [],
@@ -53,7 +60,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <CartContext.Provider value={{ ...cartData, addProductHandler }}>
+      <CartContext.Provider
+        value={{ ...cartData, addProductHandler, deleteProductHandler }}
+      >
         <FavoriteContext.Provider value={{ ...favorites, handleFavorite }}>
           <GlobalStyle />
           <Head>

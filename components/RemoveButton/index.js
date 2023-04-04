@@ -1,18 +1,18 @@
 import React from "react";
 import { BiTrash } from "react-icons/Bi";
 import styled from "styled-components";
+import { useContext } from "react";
+import { CartContext } from "../../pages/_app";
 
-export default function RemoveButton() {
-  const deleteItemHandler = () => {
-    const isDel = window.confirm("Are you sure to delete?");
-    if (isDel){
-
-
-    }
+export default function RemoveButton(props) {
+  const cartcontext = useContext(CartContext);
+  
+  const deleteButtonHandler = () => {
+    cartcontext.deleteProductHandler(props.productcard);
+    
   };
-
   return (
-    <StyledRemoveButton type="button" onClick={deleteItemHandler}>
+    <StyledRemoveButton type="button" onClick={()=>{deleteButtonHandler()} }>
       <BiTrash fontSize="26" />
     </StyledRemoveButton>
   );
@@ -21,12 +21,19 @@ export default function RemoveButton() {
 const StyledRemoveButton = styled.button`
   background-color: #c9ffd5;
   border-radius: 40%;
-  color:black
   position: absolute;
-  width:40px;
-  height:40px;
+  width:6%;
+  height:6%;
+  transition:0.3s;
   :hover{
     color:red;
-    transform:rotate(1turn)
+    //transform:rotate(1turn)
   }
+  border-radius: 50%;
+  color: black;
+  margin-right: 10%;
+  position: absolute;
+  right: 10%;
+  bottom: 6%;
+  border:none;
  `;

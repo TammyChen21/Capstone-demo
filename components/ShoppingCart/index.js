@@ -6,7 +6,7 @@ import RemoveButton from "../RemoveButton";
 
 export default function ShoppingCart() {
   const context = useContext(CartContext);
-  
+ 
   return (
     <>
       <StyledShoppingCart>
@@ -19,7 +19,6 @@ export default function ShoppingCart() {
             />
           )}
         </StyledCard>
-<RemoveButton/>
         <StyledCheckout>
           <StyledTotalPrice>Total: {context.totalPrice}</StyledTotalPrice>
           <StyledItem>(item: {context.totalAmount})</StyledItem>
@@ -70,7 +69,7 @@ const StyledCheckout = styled.div`
   margin-right: 60px;
   border-radius: 10px;
   justify-content: space-between;
-  //position: absolute;
+  position: absolute;
   align-items: center;
   background-color: #f9f166;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
