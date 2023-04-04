@@ -45,6 +45,7 @@ const StyledListItem = styled.div`
   flex-direction: column;
   position: relative;
   align-items: center;
+  
 `;
 const StyledCounter = styled.div`
   position: absolute;

@@ -4,14 +4,17 @@ import { createContext } from "react";
 import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 import Favorite from "../components/Favorite";
+import PRODUCT_DATA from "./api/productsdaten";
+
 
 export const CartContext = createContext();
 export const FavoriteContext = createContext();
 
 export default function App({ Component, pageProps }) {
+  const [productData, setProductData] = useState(PRODUCT_DATA);
   const [cartData, setCartData] = useState({
     products: [],
-    isFavorite: true,
+    showAddButton: true,
     totalAmount: 0,
     totalPrice: 0,
   });
@@ -33,6 +36,7 @@ export default function App({ Component, pageProps }) {
 
     setCartData(newCart);
   };
+  
 
   const [favorites, setFavorites] = useState({
     products: [],
@@ -45,9 +49,6 @@ export default function App({ Component, pageProps }) {
       newFavorites.products.push(productcard);
     }
     setFavorites(newFavorites);
-
-  
-    
   };
 
   return (

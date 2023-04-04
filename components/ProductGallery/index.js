@@ -1,13 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import ProductCard from "../ProductCard";
+import AddButton from "../AddButton";
+import FavoriteButton from "../FavoriteButton";
 
 export default function ProductGallery(props) {
+  
   return (
     <StyledProductGallery>
       {props.productData.map((product) => (
-        <ProductCard key={product.id} productcard={product} />
-      ))}
+        <ProductCard key={product.id} productcard={product} /> 
+      ))  
+      }
       
     </StyledProductGallery>
   );
