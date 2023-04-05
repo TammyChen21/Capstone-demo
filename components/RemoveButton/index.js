@@ -1,5 +1,5 @@
 import React from "react";
-import { BiTrash } from "react-icons/Bi";
+import { BiTrash } from "react-icons/bi";
 import styled from "styled-components";
 import { useContext } from "react";
 import { CartContext } from "../../pages/_app";
