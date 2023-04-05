@@ -5,7 +5,7 @@ import HomePage from "../pages";
 test("test", () => {
   render(<HomePage />);
   const element = screen.getByRole("heading", {
-    name: /🔱/,
+    name: /Wellcome💝/,
   });
   expect(element).toBeInTheDocument();
 });
