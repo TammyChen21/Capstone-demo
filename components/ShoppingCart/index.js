@@ -73,14 +73,14 @@ const StyledCheckout = styled.div`
   width: 100vw;
   height: 80px;
   display: flex;
-  margin-top: 480px;
   margin-left: 40px;
   margin-right: 60px;
   border-radius: 10px;
   justify-content: space-between;
   position: fixed;
+  bottom: 60px;
   align-items: center;
-  background-color: #f9f166;
+  background-color: #CDFF00;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
   z-index: 999;
 `;
@@ -88,9 +88,9 @@ const StyledCheckout = styled.div`
 const StyledCheckoutButton = styled.button`
   width: 28%;
   height: 50px;
-  background-color: #6ce5d2;
+  background-color: #ff3b77;
   border-radius: 20px;
-  color: hotpink;
+  color: white;
   margin-right: 30px;
   border: none;
 `;
