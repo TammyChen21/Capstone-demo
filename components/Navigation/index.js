@@ -8,8 +8,11 @@ import { RiStarSmileLine } from "react-icons/ri";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { RiUserHeartLine } from "react-icons/ri";
 
-export default function Navigation() {
+export default function Navigation(props) {
   const context = useContext(CartContext);
+  if(!context){
+    return null;
+  }
   return (
     <>
       <StyledListItem>
