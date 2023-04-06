@@ -41,7 +41,7 @@ const StyledFavoriteButton = styled.button`
   font-size: 10px;
   color: #fc8ac3;
   margin-right: 35%;
-  position: absolute;
+  //position: absolute;
   right: 10px;
   bottom: 6%;
 

@@ -78,7 +78,7 @@ font-size: 1.2rem;
 margin-left: 10%;
 margin-bottom: -8px;`;
 const StyledPrice = styled.div`
-margin-top: 30px;
+margin-top: 60px;
   color: #fc8663;
   margin-right: 60%;
   font-weight: 500;
@@ -95,12 +95,15 @@ width:40%;
 
 `
 
-const StyledFavoriteButton=styled.button`
-width:40px;
-height:40px;`
-const StyledAddButton=styled.button`
+const StyledFavoriteButton=styled.div`
 width:40px;
 height:40px;
+border:solid;
+`
+const StyledAddButton=styled.div`
+width:40px;
+height:40px;
+border:solid;
 `
 
 

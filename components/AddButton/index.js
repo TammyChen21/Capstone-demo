@@ -30,7 +30,7 @@ const StyledAddButton = styled.button`
   border-radius: 50%;
   color: #fc8ac3;
   margin-right: 10%;
-  position: absolute;
+  //position: absolute;
   right: 10%;
   bottom: 6%;
 
