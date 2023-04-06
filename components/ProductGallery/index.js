@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import ProductCard from "../ProductCard";
-import AddButton from "../AddButton";
-import FavoriteButton from "../FavoriteButton";
+import Link from "next/link";
 
 export default function ProductGallery(props) {
   
   return (
     <StyledProductGallery>
       {props.productData.map((product) => (
-        <ProductCard key={product.id} productcard={product} /> 
+       <StyledLink href={`/details/${product.id}`}><ProductCard key={product.id} productcard={product} /> </StyledLink>
       ))  
       }
       
@@ -27,4 +26,8 @@ const StyledProductGallery = styled.ul`
   top: 90px;
   bottom: 60px;
   position: absolute;
+`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
