@@ -17,25 +17,27 @@ export default function Layout({ children }) {
 }
 
 const StyledAppContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
   position: absolute;
 `;
 
 const StyledHeading = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 60px;
   background-color: #6ce5d2;
   color: #004056;
   text-align: center;
   position: fixed;
   z-index: 999;
-  top:0;
+  top: 0;
 `;
 
 const StyledNav = styled.ul`
   background-color: #6ce5d2;
   bottom: -20px;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   height: 60px;

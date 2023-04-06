@@ -1,22 +1,27 @@
+import { useState } from "react";
 import styled from "styled-components";
 import AddButton from "../AddButton";
 import FavoriteButton from "../FavoriteButton";
+import RemoveButton from "../RemoveButton";
 
 //each product card component
-export default function ProductCard({ productcard }) {
-  const { id, image, title, description, price, amount, isFavorite } =
+export default function ProductCard({ productcard, showAddButton=true}) {
+  const { id, image, title, description, price, amount, isFavorite,index} =
     productcard;
   return (
-    <StyledProductCard>
-      <StyledImg src={image} alt="photo" width="140px" height="140px" />
-      <StyledProduct>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledDes>{description}</StyledDes>
-      </StyledProduct>
-      <StyledPrice>{price}</StyledPrice>
-      <FavoriteButton productcard={productcard} />
-      <AddButton productcard={productcard} />
-    </StyledProductCard>
+    <>
+      <StyledProductCard>
+        <StyledImg src={image} alt="photo" width="140px" height="140px" />
+        <StyledProduct>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledDes>{description}</StyledDes>
+        </StyledProduct>
+        <StyledPrice>{price}</StyledPrice>
+
+        <FavoriteButton productcard={productcard} />
+        <div>{showAddButton? <AddButton productcard={productcard} /> :<RemoveButton productcard={productcard}/>}</div>
+      </StyledProductCard>
+    </>
   );
 }
 
