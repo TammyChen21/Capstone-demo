@@ -29,16 +29,22 @@ export default function DetailsPage() {
           <StyledImage
             src={selectedProduct.image}
             alt="photo"
-            width="280px"
-            height="280px"
+            width="240px"
+            height="240px"
           />
           <StyledTitle>{selectedProduct.title}</StyledTitle>
           <StyledDes>{selectedProduct.description}</StyledDes>
+          
           <StyledPrice>{selectedProduct.price}</StyledPrice>
           <StyledButtonCountainer>
-          <StyledFavoriteButton><FavoriteButton /></StyledFavoriteButton>
-          <StyledAddButton><AddButton productcard={selectedProduct}/></StyledAddButton>
+            <StyledFavoriteButton>
+              <FavoriteButton />
+            </StyledFavoriteButton>
+            <StyledAddButton>
+              <AddButton productcard={selectedProduct}/>
+            </StyledAddButton>
           </StyledButtonCountainer>
+          
         </StyledProductContainer>
       </StyledDetailsPage>
     </>
@@ -47,63 +53,59 @@ export default function DetailsPage() {
 
 const StyledDetailsPage = styled.div``;
 const StyledProductContainer = styled.div`
-box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
-width: 80%;
-margin-top:80px;
-margin-left:10%;
-border-radius: 25px;
-display: flex;
-flex-direction: column;
-align-items: center;
-border:solid;
-
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
+  width: 80%;
+  margin-top: 80px;
+  margin-left: 10%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid;
 `;
 
-const StyledImage = styled.div`
-border-radius: 20px;
+const StyledImage = styled.img`
+  border-radius: 20px;
   margin-top: 5px;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
-  margin-bottom: -15px;
+  margin-bottom: -5px;
 `;
 
 const StyledTitle = styled.h2`
-color: #004056;
-  margin-bottom: 8px;
+  color: #004056;
+  margin-bottom: -8px;
   margin-left: 10%;
-  margin-right: 10px;`;
+  margin-right: 10px;
+`;
 
-const StyledDes = styled.h3`
-color: #004056;
-font-size: 1.2rem;
-margin-left: 10%;
-margin-bottom: -8px;`;
+const StyledDes = styled.p`
+  color: #004056;
+  font-size: 1rem;
+  margin-left: 10%;
+  margin-bottom: -18px;
+`;
 const StyledPrice = styled.div`
-margin-top: 60px;
+  margin-top: 40px;
   color: #fc8663;
   margin-right: 60%;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   ::after {
     content: "€";
   }
 `;
-const StyledButtonCountainer=styled.div`
-display:flex;
-justify-content: space-around;
-border:solid;
-width:40%;
+const StyledButtonCountainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin-right: -50%;
+`;
 
-`
-
-const StyledFavoriteButton=styled.div`
-width:40px;
-height:40px;
-border:solid;
-`
-const StyledAddButton=styled.div`
-width:40px;
-height:40px;
-border:solid;
-`
-
-
+const StyledFavoriteButton = styled.div`
+  width: 40px;
+  height: 40px;
+`;
+const StyledAddButton = styled.div`
+  width: 40px;
+  height: 40px;
+`;
