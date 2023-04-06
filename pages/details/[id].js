@@ -24,34 +24,35 @@ export default function DetailsPage() {
   return (
     <>
       <Layout />
-      <StyledDetailsPage>
-        <StyledProductContainer>
-          <StyledImage
-            src={selectedProduct.image}
-            alt="photo"
-            width="240px"
-            height="240px"
-          />
-          <StyledTitle>{selectedProduct.title}</StyledTitle>
-          <StyledDes>{selectedProduct.description}</StyledDes>
-          
-          <StyledPrice>{selectedProduct.price}</StyledPrice>
-          <StyledButtonCountainer>
-            <StyledFavoriteButton>
-              <FavoriteButton />
-            </StyledFavoriteButton>
-            <StyledAddButton>
-              <AddButton productcard={selectedProduct}/>
-            </StyledAddButton>
-          </StyledButtonCountainer>
-          
-        </StyledProductContainer>
-      </StyledDetailsPage>
+      <StyledPage>
+      <StyledProductContainer>
+        <StyledImage
+          src={selectedProduct.image}
+          alt="photo"
+          width="240px"
+          height="240px"
+        />
+        <StyledTitle>{selectedProduct.title}</StyledTitle>
+        <StyledDes>{selectedProduct.description}</StyledDes>
+        <StyledPrice>{selectedProduct.price}</StyledPrice>
+        <StyledButtonCountainer>
+          <StyledFavoriteButton>
+            <FavoriteButton />
+          </StyledFavoriteButton>
+          <StyledAddButton>
+            <AddButton productcard={selectedProduct} />
+          </StyledAddButton>
+        </StyledButtonCountainer>
+      </StyledProductContainer>
+      </StyledPage>
     </>
   );
 }
+const StyledPage=styled.div`
+align-items: center;
+`
 
-const StyledDetailsPage = styled.div``;
+
 const StyledProductContainer = styled.div`
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
   width: 80%;
@@ -61,7 +62,6 @@ const StyledProductContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid;
 `;
 
 const StyledImage = styled.img`
@@ -104,8 +104,10 @@ const StyledButtonCountainer = styled.div`
 const StyledFavoriteButton = styled.div`
   width: 40px;
   height: 40px;
+  margin-top:-20%;
 `;
 const StyledAddButton = styled.div`
   width: 40px;
   height: 40px;
+  margin-top:-20%;
 `;
