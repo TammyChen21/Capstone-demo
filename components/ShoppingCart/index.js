@@ -12,7 +12,7 @@ export default function ShoppingCart() {
       <StyledShoppingCart>
         <StyledCard>
           {context.products.map((product) => (
-            <ProductCard productcard={product} showAddButton={false} />
+            <ProductCard key={product.id} productcard={product} showAddButton={false} />
           ))}
         </StyledCard>
         <StyledCheckout>
