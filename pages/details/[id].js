@@ -8,14 +8,14 @@ import FavoriteButton from "../../components/FavoriteButton";
 import AddButton from "../../components/AddButton";
 import PRODUCT_DATA from "../api/productsdaten";
 
-export default function DetailsPage() {
+export default function DetailsPage(props) {
   const productData = useContext(ProductData);
   const router = useRouter();
   const id = router.query.id;
 
   let selectedProduct = null;
   selectedProduct = productData.find((productcard) => productcard.id === id);
-  console.log(productData);
+  console.log(selectedProduct);
 
   if (!selectedProduct) {
     return <div>loading...</div>;
@@ -37,11 +37,11 @@ export default function DetailsPage() {
         <StyledPrice>{selectedProduct.price}</StyledPrice>
         <StyledButtonCountainer>
           <StyledFavoriteButton>
-            <FavoriteButton />
+            <FavoriteButton productcard={selectedProduct}/>
           </StyledFavoriteButton>
-          <StyledAddButton>
-            <AddButton productcard={selectedProduct} />
-          </StyledAddButton>
+         
+         <StyledAddButton><AddButton productcard={selectedProduct}/></StyledAddButton>  
+         
         </StyledButtonCountainer>
       </StyledProductContainer>
       </StyledPage>

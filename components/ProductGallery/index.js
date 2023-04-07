@@ -8,7 +8,7 @@ export default function ProductGallery(props) {
   return (
     <StyledProductGallery>
       {props.productData.map((product) => (
-       <StyledLink key={product.id} href={`/details/${product.id}`}><ProductCard key={product.id} productcard={product}/></StyledLink>
+       <ProductCard key={product.id} productcard={product}/>
       ))  
       }
       
@@ -26,8 +26,4 @@ const StyledProductGallery = styled.ul`
   top: 90px;
   bottom: 60px;
   position: absolute;
-`;
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: black;
 `;
