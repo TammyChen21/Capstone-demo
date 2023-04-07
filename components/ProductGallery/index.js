@@ -8,7 +8,7 @@ export default function ProductGallery(props) {
   return (
     <StyledProductGallery>
       {props.productData.map((product) => (
-       <StyledLink href={`/details/${product.id}`}><ProductCard key={product.id} productcard={product} /> </StyledLink>
+       <StyledLink key={product.id} href={`/details/${product.id}`}><ProductCard key={product.id} productcard={product}/></StyledLink>
       ))  
       }
       
