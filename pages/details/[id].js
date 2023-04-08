@@ -8,6 +8,7 @@ import FavoriteButton from "../../components/FavoriteButton";
 import AddButton from "../../components/AddButton";
 import PRODUCT_DATA from "../api/productsdaten";
 
+
 export default function DetailsPage(props) {
   const productData = useContext(ProductData);
   const router = useRouter();
@@ -15,8 +16,9 @@ export default function DetailsPage(props) {
 
   let selectedProduct = null;
   selectedProduct = productData.find((productcard) => productcard.id === id);
-  console.log(selectedProduct);
-
+  //const newSelectedProduct= {productcard:selectedProduct}
+  //console.log("111",newSelectedProduct)
+console.log(selectedProduct);
   if (!selectedProduct) {
     return <div>loading...</div>;
   }
@@ -39,8 +41,8 @@ export default function DetailsPage(props) {
           <StyledFavoriteButton>
             <FavoriteButton productcard={selectedProduct}/>
           </StyledFavoriteButton>
-         
-         <StyledAddButton><AddButton productcard={selectedProduct}/></StyledAddButton>  
+
+          <StyledAddButton><AddButton productcard={selectedProduct}/></StyledAddButton>
          
         </StyledButtonCountainer>
       </StyledProductContainer>
@@ -110,4 +112,5 @@ const StyledAddButton = styled.div`
   width: 40px;
   height: 40px;
   margin-top:-20%;
+  z-index:999;
 `;

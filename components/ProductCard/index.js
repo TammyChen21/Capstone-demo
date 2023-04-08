@@ -8,6 +8,7 @@ import Link from "next/link";
 export default function ProductCard({ productcard, showAddButton = true }) {
   const { id, image, title, description, price, amount, isFavorite, index } =
     productcard;
+    
   return (
     <>
       <StyledProductCard>
