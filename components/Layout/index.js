@@ -18,9 +18,7 @@ export default function Layout({ children }) {
 
 const StyledAppContainer = styled.div`
   width: 100vw;
-  height: 100vh;
   position: absolute;
-  z-index:-1;
 `;
 
 const StyledHeading = styled.div`

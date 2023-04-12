@@ -49,9 +49,9 @@ export default function App({ Component, pageProps }) {
 
   const [favorites, setFavorites] = useState({
     products: [],
-    isFavorite: true,
+   // isFavorite: true,
   });
-
+console.log(favorites);
   const handleFavorite = (productcard) => {
     const newFavorites = { ...favorites };
     if (newFavorites.products.indexOf(productcard) < 0) {

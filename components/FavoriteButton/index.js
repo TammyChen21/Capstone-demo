@@ -10,12 +10,14 @@ export default function FavoriteButton(props) {
   const favoriteButtonHandler = () => {
     favoritecontext.handleFavorite(props.productcard);
   };
-
-  const [isFavorite, setIsFavorite] = useState(false);
+//console.log("props.productcard"+props.productcard);
+console.log(favoritecontext);
+  const [isFavorite, setIsFavorite] = useState(favoritecontext.isFavorite);
 
   const handleFavoriteClick = () => {
     setIsFavorite(!isFavorite);
   };
+  
   return (
     <StyledFavoriteButton
       type="button"
