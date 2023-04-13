@@ -5,7 +5,7 @@ import { render, screen } from "@testing-library/react";
 test("test", () => {
   render(<HomePage />);
   const element = screen.getByRole("heading", {
-    name: /Wellcome💝/,
+    name: /Little Lucky Finds💝/,
   });
   expect(element).toBeInTheDocument();
 });

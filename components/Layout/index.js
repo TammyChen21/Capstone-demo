@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <StyledAppContainer>
       <StyledHeading>
-        <h1>Wellcome💝</h1>
+        <h2>Little Lucky Finds💝</h2>
       </StyledHeading>
 
       <StyledNav>
