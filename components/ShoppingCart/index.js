@@ -12,11 +12,7 @@ export default function ShoppingCart() {
       <StyledShoppingCart>
         <StyledCard>
           {context.products.map((product) => (
-            <ProductCard
-              key={product.id}
-              productcard={product}
-              showAddButton={false}
-            />
+            <ProductCard key={product.id} productcard={product} showAddButton={false} />
           ))}
         </StyledCard>
         <StyledCheckout>
@@ -80,7 +76,7 @@ const StyledCheckout = styled.div`
   position: fixed;
   bottom: 60px;
   align-items: center;
-  background-color: #CDFF00;
+  background-color: #cdff00;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
   z-index: 999;
 `;

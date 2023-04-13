@@ -10,12 +10,14 @@ export default function FavoriteButton(props) {
   const favoriteButtonHandler = () => {
     favoritecontext.handleFavorite(props.productcard);
   };
-
-  const [isFavorite, setIsFavorite] = useState(false);
+//console.log("props.productcard"+props.productcard);
+console.log(favoritecontext);
+  const [isFavorite, setIsFavorite] = useState(favoritecontext.isFavorite);
 
   const handleFavoriteClick = () => {
     setIsFavorite(!isFavorite);
   };
+  
   return (
     <StyledFavoriteButton
       type="button"
@@ -41,7 +43,7 @@ const StyledFavoriteButton = styled.button`
   font-size: 10px;
   color: #fc8ac3;
   margin-right: 35%;
-  position: absolute;
+  //position: absolute;
   right: 10px;
   bottom: 6%;
 

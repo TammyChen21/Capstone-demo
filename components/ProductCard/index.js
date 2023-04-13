@@ -3,23 +3,31 @@ import styled from "styled-components";
 import AddButton from "../AddButton";
 import FavoriteButton from "../FavoriteButton";
 import RemoveButton from "../RemoveButton";
-
+import Link from "next/link";
 //each product card component
-export default function ProductCard({ productcard, showAddButton=true}) {
-  const { id, image, title, description, price, amount, isFavorite,index} =
+export default function ProductCard({ productcard, showAddButton = true }) {
+  const { id, image, title, description, price, amount, isFavorite, index } =
     productcard;
+    
   return (
     <>
       <StyledProductCard>
-        <StyledImg src={image} alt="photo" width="140px" height="140px" />
+      <StyledLink href={`/details/${productcard.id}`}><StyledImg src={image} alt="photo" width="140px" height="140px" /></StyledLink>
         <StyledProduct>
-          <StyledTitle>{title}</StyledTitle>
+        <StyledLink href={`/details/${productcard.id}`}><StyledTitle>{title}</StyledTitle></StyledLink>
           <StyledDes>{description}</StyledDes>
         </StyledProduct>
         <StyledPrice>{price}</StyledPrice>
-
-        <FavoriteButton productcard={productcard} />
-        <div>{showAddButton? <AddButton productcard={productcard} /> :<RemoveButton productcard={productcard}/>}</div>
+        <ButtonContainer>
+          <FavoriteButton  />
+          <div>
+            {showAddButton ? (
+              <AddButton productcard={productcard} />
+            ) : (
+              <RemoveButton productcard={productcard} />
+            )}
+          </div>
+        </ButtonContainer>
       </StyledProductCard>
     </>
   );
@@ -69,4 +77,14 @@ const StyledPrice = styled.div`
   ::after {
     content: "€";
   }
+`;
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space around;
+  margin-top: -15%;
+  margin-right: -30%;
+`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
