@@ -1,4 +1,4 @@
-## Little-lucky-finds 
+## 💝 Little-lucky-finds 💝
 
 Welcome to Shop "little-lucky-finds" for buying and selling gently used children's items!
 
@@ -16,7 +16,12 @@ Little-lucky-finds is a web-based application designed to facilitate the buying 
 
 - View a comprehensive display of various product details, including images, descriptions, and prices.
 - Seamlessly interact with products by utilizing star icon for adding to the Wishlist or the shopping cart icon for direct placement in the shopping cart.
-  
+
+**Search Functionality:** Empowering users with a dynamic search experience, the search bar allows you to:
+
+- Use the search box to input specific keywords or phrases based on your preferences and needs.
+- Instantly retrieve matched products that align with your search criteria.
+
 **Detailed Product View:** Users can gain in-depth insights into products by:
 - Clicking on items to view comprehensive details about each product.
 - Making informed decisions with a detailed overview of product specifications and information.
