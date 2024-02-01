@@ -1,4 +1,4 @@
-## Little-lucky-finds
+## Little-lucky-finds 
 
 Welcome to Shop "little-lucky-finds" for buying and selling gently used children's items!
 
